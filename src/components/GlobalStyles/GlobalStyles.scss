@@ -29,6 +29,10 @@ body {
     color: var(--text-color);
 }
 
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
 button, input, [tabindex] {
     outline: none;
     border: none;

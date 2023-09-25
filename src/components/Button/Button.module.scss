@@ -7,6 +7,7 @@
     border: 1px solid transparent;
     background-color: var(--white);
     user-select: none;
+    display: inline-flex;
     cursor: pointer;
 
     + .wrapper{
@@ -21,6 +22,12 @@
 
 .icon + .title, .title + .icon {
     margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
 }
 
 //Button types

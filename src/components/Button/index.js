@@ -4,7 +4,7 @@ import styles from './Button.module.scss'
 
 const cx = classNames.bind(styles)
 
-function Button({ to, href, disabled = false, text = false, primary = false, outline = false, small = false, large = false, rounded = false, leftIcon, rightIcon, children, onClick, ...rest }) {
+function Button({ to, href, disabled = false, text = false, primary = false, outline = false, small = false, large = false, rounded = false, className, leftIcon, rightIcon, children, onClick, ...rest }) {
     let Comp = 'button'
     const props = {
         onClick,
@@ -35,6 +35,7 @@ function Button({ to, href, disabled = false, text = false, primary = false, out
         small,
         large,
         rounded,
+        [className]: className,
     })
 
     return (
