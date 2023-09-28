@@ -8,6 +8,7 @@
     background-color: var(--white);
     user-select: none;
     display: inline-flex;
+    justify-content: center;
     cursor: pointer;
 
     + .wrapper{
