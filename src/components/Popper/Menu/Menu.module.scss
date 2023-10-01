@@ -1,10 +1,15 @@
 .menu-list {
     width: 226px;
- 
+    
     .menu-item {
         margin-left: 0;
+    
+        &.separate {
+            border-top: 1px solid rgba(22, 24, 35, 0.12);
+        }
     }
 }
+
 
 .menu-popper {
     padding-bottom: 8px;

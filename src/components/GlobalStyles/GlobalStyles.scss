@@ -43,3 +43,23 @@ a[href] {
     color: var(--text-color);
     text-decoration: none;
 }
+
+// Tippy
+body {
+
+    .tippy-box {
+        font-size: 1.6rem;
+        border-radius: 8px;
+        background-color: #545454eb;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+
+    .tippy-content {
+        padding: 8px;
+    }
+    
+    .tippy-arrow {
+        color: #545454eb;
+    }
+}
