@@ -2,7 +2,6 @@ import { useState } from 'react'
 import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleQuestion, faCircleXmark, faCoins, faEarthAsia, faEllipsisVertical, faGear, faKeyboard, faMagnifyingGlass, faSignOut, faSpinner, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faMessage, faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 import Tippy from '@tippyjs/react'
 import HeadlessTippy from '@tippyjs/react/headless'
 import 'tippy.js/dist/tippy.css'
@@ -13,6 +12,8 @@ import images from '~/assets/images'
 import { Wrapper as PopperWrapper } from '~/components/Popper'
 import AccountItem from '~/components/AccountItem'
 import Menu from '~/components/Popper/Menu'
+import { MessageIcon, InboxIcon } from '~/components/Icons'
+import Image from '~/components/Image'
 
 const cx = classNames.bind(styles)
 
@@ -116,14 +117,14 @@ function Header() {
                 <div className={cx('action')}>
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 200]} content='Messages' placement='bottom'>
+                            <Tippy content='Messages' placement='bottom'>
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faPaperPlane}/>
+                                    <MessageIcon/>
                                 </button>
                             </Tippy>
-                            <Tippy content='Inbox' placement='bottom'>
+                            <Tippy delay={[0, 200]} content='Inbox' placement='bottom'>
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage}/>
+                                    <InboxIcon/>
                                 </button>
                             </Tippy>
                         </>
@@ -136,7 +137,11 @@ function Header() {
 
                     <Menu items={currentUser ? USER_MENU_ITEMS : MENU_ITEMS} onChange={handleChangeMenu}>
                         {currentUser ? (
-                            <img className={cx('user-avt')} src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/1253dc15a05d70ebb29cb35c5f1ff0e4.jpeg?x-expires=1695542400&x-signature=mwDInPgjPkoZBz%2BVVAj0bI3mSEc%3D" alt=""/>
+                            <Image 
+                                className={cx('user-avt')} 
+                                alt=""
+                                src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/1253dc15/a05d70ebb29cb35c5f1ff0e4.jpeg?x-expires=1695542400&x-signature=mwDInPgjPkoZBz%2BVVAj0bI3mSEc%3D" 
+                            />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical}/>

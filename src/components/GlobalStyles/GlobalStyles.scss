@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Sonsie+One&display=swap');
 
 :root {
     --primary: #fe2c55;
@@ -23,15 +22,31 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'TikTokFont', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
 }
 
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Bold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Semibold.woff2');
+    font-weight: 600;
+}
+
 button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'TikTokFont', sans-serif;
 }
 
 button, input, [tabindex] {
@@ -46,7 +61,6 @@ a[href] {
 
 // Tippy
 body {
-
     .tippy-box {
         font-size: 1.6rem;
         border-radius: 8px;
