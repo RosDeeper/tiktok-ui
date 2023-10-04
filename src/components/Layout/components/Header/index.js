@@ -110,7 +110,7 @@ function Header() {
                             <Image 
                                 className={cx('user-avt')} 
                                 alt=""
-                                src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/1253dc15/a05d70ebb29cb35c5f1ff0e4.jpeg?x-expires=1695542400&x-signature=mwDInPgjPkoZBz%2BVVAj0bI3mSEc%3D" 
+                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/1253dc15a05d70ebb29cb35c5f1ff0e4.jpeg?x-expires=1696572000&x-signature=tG9fiJ9sGRzeGukci3qH3O1N8%2B8%3D" 
                             />
                         ) : (
                             <button className={cx('more-btn')}>
