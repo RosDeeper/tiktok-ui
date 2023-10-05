@@ -4,6 +4,7 @@ import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
+import * as searchService from '~/apiServices/searchService'
 import { Wrapper as PopperWrapper } from '~/components/Popper'
 import AccountItem from '~/components/AccountItem'
 import styles from './Search.module.scss'
@@ -27,17 +28,16 @@ function Search() {
             return
         }
 
-        setLoading(true)
+        const fetchAPI = async () => {
+            setLoading(true)
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounced)}&type=less`)
-            .then(response => response.json())
-            .then(response =>{
-                setSearchResults(response.data)
-                setLoading(false)
-            })
-            .catch(() => {
-                setLoading(false)
-            })
+            const result = await searchService.search(debounced)
+            setSearchResults(result)
+            setLoading(false)
+        }
+
+        fetchAPI()
+
     }, [debounced])
 
     const handleClear = () => {
