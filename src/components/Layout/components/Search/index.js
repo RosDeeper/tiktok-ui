@@ -40,6 +40,16 @@ function Search() {
 
     }, [debounced])
 
+    const handleChange = (e) => {
+        const inputValue = e.target.value
+
+        if(inputValue.startsWith(' ')) {
+            return
+        }
+
+        setSearchValue(inputValue)
+    }
+
     const handleClear = () => {
         setSearchValue('')
         setSearchResults([])
@@ -72,7 +82,7 @@ function Search() {
                     value={searchValue}
                     placeholder='Search....' 
                     spellCheck={false}
-                    onChange={e => setSearchValue(e.target.value)}
+                    onChange={handleChange}
                     onFocus={() => setShowResult(true)}
                 />
                 

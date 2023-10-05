@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleQuestion, faCoins, faEarthAsia, faEllipsisVertical, faGear, faKeyboard, faSignOut, faUser } from '@fortawesome/free-solid-svg-icons'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
+import { Link } from 'react-router-dom'
 
 import Button from '~/components/Button'
 import styles from './Header.module.scss'
@@ -11,6 +12,7 @@ import Menu from '~/components/Popper/Menu'
 import { MessageIcon, InboxIcon } from '~/components/Icons'
 import Image from '~/components/Image'
 import Search from '../Search'
+import routesConfig from '~/config/routes'
 
 const cx = classNames.bind(styles)
 
@@ -79,7 +81,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt=''/>
+                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                        <img src={images.logo} alt=''/>
+                    </Link>
                 </div>
 
                <Search/>
