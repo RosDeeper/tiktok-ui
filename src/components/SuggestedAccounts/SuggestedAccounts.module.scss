@@ -7,13 +7,19 @@
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 1.4rem;
-    color: #161823bf;
+    color: #16182380;
 }
 
 .account-item {
     display: flex;
     align-items: center;
     padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #16182308;
+    }
 }
 
 .avatar {

@@ -1,0 +1,47 @@
+.wrapper {
+    width: 320px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.body {
+    margin-top: 12px;
+}
+
+.nickname {
+    font-size: 1.8rem;
+}
+
+.check {
+    font-size: 1.4rem;
+    color: #20D5EC;
+    padding-left: 4px;
+}
+
+.name {
+    font-size: 1.4rem;
+}
+
+.analyst {
+    margin-top: 10px;
+}
+
+.value {
+    margin-right: 4px;
+}
+
+.value ~ .value {
+    margin-left: 20px;
+}
